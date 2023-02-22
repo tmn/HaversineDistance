@@ -1,6 +1,6 @@
 # Haversine Distance
 
-The Haversine distance formula determines the great-circle distanec between two points on a sphere given their longitudes and latitudes.
+The Haversine distance formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes.
 
 ## Usage
 
