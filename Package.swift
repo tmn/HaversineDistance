@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -7,15 +7,19 @@ let package = Package(
     name: "HaversineDistance",
     products: [
         .library(
-            name: "HaversineDistance",
-            targets: ["HaversineDistance"]),
+            name: "haversineFormula",
+            targets: ["haversineFormula"]),
     ],
     targets: [
         .target(
-            name: "HaversineDistance",
-            dependencies: []),
+            name: "haversineFormula",
+            path: "src",
+            swiftSettings: [.interoperabilityMode(.Cxx)]
+        ),
         .testTarget(
-            name: "HaversineDistanceTests",
-            dependencies: ["HaversineDistance"]),
+            name: "haversineFormulaTests",
+            dependencies: ["haversineFormula"],
+            swiftSettings: [.interoperabilityMode(.Cxx)]
+        ),
     ]
 )
